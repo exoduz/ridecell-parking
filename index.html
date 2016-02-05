@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Ridecell Parking App</title>
+	
+	<meta name="description" content="Ridecell Parking App" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png" />	
+	<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png" />
+	
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 10]>
+		<script src="/q/js/html5shiv/html5shiv.js"></script>
+		<script src="/q/js/respond/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Static navbar -->
+	<header>
+	</header>
+
+	<div id="preloader">
+		<div class='loader'>
+			<div class="loader-logo"><img src="img/logo/ridecell-logo.png" alt="Ridecell Logo" /></div>
+		    <div class='loader-dot'></div>
+		    <div class='loader-dot'></div>
+		    <div class='loader-dot'></div>
+		    <div class='loader-dot'></div>
+		    <div class='loader-dot'></div>
+		    <div class='loader-dot'></div>
+		    <div class='loader-text'></div>
+	    </div><!-- .loader -->
+	</div><!-- #preloader -->
+
+	<section id="map">
+		<div class="template" style="display: none;">Hello</div>
+	</section>
+
+	<div id="reservation-modal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Would you like to reserve this parking spot?</h4>
+				</div>
+				
+				<form id="reservation-form" type="post" action="#">
+					<div class="modal-body">
+						<h4>
+							Parking Number: <strong id="reservation-parking-name"></strong><br />
+							Cost per minute: <strong id="reservation-cost"></strong><br />
+						</h4>
+
+						<div class="form-group">
+							<label class="control-label" for="reservation-when">When would you like to reserve this parking spot?</label>
+							<div class='input-group date' id='datetimepicker1'>
+			                    <input type='text' id="reservation-when" name="reservation-when" class="form-control" />
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label" for="reservation-duration">How long would you like to reserve this parking spot?</label>
+							<select id="reservation-duration" name="reservation-duration" class="form-control">
+							</select>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<div class="row">
+							<div class="col-md-6 text-left">
+								<h4>Total: <strong><span id="total-cost">$0.00</span></strong></h4>
+							</div><!-- .col-md-6 -->
+							<div class="col-md-6 text-right">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+								<button type="submit" id="make-reservation" class="btn btn-success">Reserve</button>
+							</div><!-- .col-md-6 -->
+						</div><!-- .row -->
+					</div>
+				</form>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment/min/moment.min.js"></script>
+	<script src="js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtndREvFCdDZK_mjokPvzENCLJ0QdIY_g&callback=initMap" async defer></script>
+</body>
+</html>
