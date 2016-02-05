@@ -1,4 +1,9 @@
 <?
+	/*
+	 * PHP file required because API does not allow cross site requests
+	 * Curl page, retrieve data and output
+	*/
+
 	$url = "http://ridecellparking.herokuapp.com/api/v1/parkinglocations?format=json";
 	$ch = curl_init();
 	$timeout = 5;

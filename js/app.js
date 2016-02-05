@@ -143,7 +143,11 @@ $(function() {
 		//more than likely should do some AJAX post, with validation (server and client to check data integrity)
 		//get data via serialize(), append all other required data to input into database
 		//save info
+		//show success or failure message
 		console.log("Current chosen data: " + JSON.stringify(currentData));
 		console.log("Form fields: " + $(this).serialize());
+
+		var $reservationModal = $('#reservation-modal');
+		$reservationModal.modal('hide');
 	});
 });
