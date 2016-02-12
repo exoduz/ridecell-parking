@@ -5,8 +5,12 @@ var infoWindow = [],
 
 //create map
 var initMap = function() {
+<<<<<<< HEAD
 	var url = "http://work.robinjulius.com/ridecell/data/parkinglocations.json",
 		//url = "/get_data.php", //previously using url, changed to use data file
+=======
+	var url = "/get_data.php",
+>>>>>>> d2ff7dcd1adc65d03ba07f8b5cbdc00291ec89bf
 		$preloader = $('#preloader');
 
 	$preloader.css('display', 'block'); //show preloader
